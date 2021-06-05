@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    top: 0;
+    padding-top: 5px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    background-color: black;
+    opacity: 0.9;
+    justify-content: space-between;
+}
+
+.leftBar {
+    display: flex;
+    flex-direction: row;
+}
+
+#logo {
+    padding-left: 20px;
+    width: 100px;
+}
+
+.left-nav {
+    margin-left: 30px;
+    position: relative;
+}
+
+nav a {
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    color: #FEFFD9;
+}
+
+nav ul {
+    padding: 0;
+    margin: 13px 0;
+}
+
+#marker {
+    /* position absolute terhadap relative atasnya */
+    position: absolute;
+    height: 4px;
+    /* width: 100%; */
+    /* Kalo mau dari bawah bottom / atas top */
+    /* bottom: 0; */ 
+    top: -5px;
+    background: #FEFFD9;
+    transition: 0.5s;
+    /* border-radius: 4px; */
+}
+
+nav li {
+    padding: 0 8px;
+    padding-bottom: 10px;
+    display: inline;
+    list-style-type: none;
+}
+
+li a:hover {
+    color: #c4c4b7;
+}
+
+.rightBar button {
+    position: relative;
+    color: #FEFFD9;
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: 1px solid #FEFFD9;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    margin: 10px;
+    height: auto;
+    overflow: hidden;
+}
+
+.rightBar button::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: "";
+    transition: 0.5s;
+    transform: translateX(-100%);
+    left: 0;
+    top: 0;
+    background: #FEFFD9;
+    opacity: 0;
+}
+
+.rightBar button:hover::before {
+    transform: translateX(0%);
+    opacity: 1;
+    z-index: -1;
+}
+
+.rightBar button:hover {
+    color: #0F0C10;
+}
+
+main {
+    overflow: auto;
+}
+
+.home {
+    padding: 30px 0;
+    width: 100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1) ), url(../images/background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.home_top {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#bigLogo {
+    justify-content: center;
+    width: 500px;
+}
+
+#description {
+    padding: 0 100px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #FEFFD9;
+    text-shadow: 2px 2px black;
+    font-size: x-large;
+}
+
+.platform {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#p-text {
+    font-family: 'Times New Roman', Times, serif;
+    color: #FEFFD9;
+    font-size: xx-large;
+    text-shadow: 2px 2px black;
+}
+
+.p-images {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.p-images img {
+    height: 70px;
+    margin: 0 10px;
+    filter: invert(97%) sepia(65%) saturate(322%) hue-rotate(5deg) brightness(106%) contrast(104%);
+}
+
+.p-img {
+    position: relative;
+    background: transparent;
+    border: 1px solid black;
+    border-style: hidden;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.p-img::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: "";
+    transition: 0.5s;
+    transform: translateX(-100%);
+    left: 0;
+    top: 0;
+    background: #FEFFD9;
+    opacity: 0;
+}
+
+.p-img:hover::before {
+    transform: translateX(0%);
+    opacity: 0.9;
+}
+
+.p-img:hover img {
+    filter: brightness(0);
+}
+
+
+.p-1 {
+    padding: 10px;
+}
+
+.p-2 {
+    padding: 10px 38px;
+}
+
+.p-3 {
+    padding: 10px 30px;
+}
+
+.character {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: #FEFFD9;
+    text-align: center;
+    font-size: xxx-large;
+}
+
+#c-title {
+    text-decoration: underline;
+}
+
+.c-box {
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px;
+    border: 1px solid #FEFFD9;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.c-left {
+    justify-content: left;
+    display: flex;
+    flex-direction: row;
+}
+
+.c-left img {
+    margin: 25px;
+    height: 200px;
+    border: 1px solid #FEFFD9;
+    border-radius: 25px;
+}
+
+.c-textBox {
+    padding-top: 20px;
+    margin: 0 10px;
+}
+
+.c-left .c-textBox p{
+    font-size: x-large;
+    text-align: left;
+}
+
+.c-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+#c-name q{
+    font-style: oblique;
+}
+
+.c-right img {
+    margin: 25px;
+    height: 200px;
+    border: 1px solid #FEFFD9;
+    border-radius: 25px;
+}
+
+.c-right .c-textBox p{
+    padding-top: 5px;
+    font-size: x-large;
+    text-align: right;
+}
+
+
+
+
+
+
+
+
