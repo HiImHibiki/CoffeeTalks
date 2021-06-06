@@ -1,4 +1,3 @@
-// Marker
 
 var marker = document.querySelector("#marker");
 var nav = document.querySelector(".navbar");
@@ -7,8 +6,17 @@ var item = document.querySelectorAll(".left-nav li");
 
 var home = document.querySelector("#home");
 var character = document.querySelector("#character");
-var menu = document.querySelector("#menu");
-var about = document.querySelector("#about");
+var profile = document.querySelector("#profile");
+
+function scrollStop (callback, refresh = 66) {
+    if (!callback || typeof callback !== 'function') return;
+
+    let isScrolling;
+    window.addEventListener('scroll', function (event) {
+        window.clearTimeout(isScrolling);
+        isScrolling = setTimeout(callback, refresh);
+    }, false);
+}
 
 function indicator(e) {
     marker.style.left = e.offsetLeft+"px";
@@ -20,10 +28,11 @@ document.addEventListener("scroll", changeActive);
 item.forEach(link => {
     link.addEventListener("click", (e)=>{
         document.removeEventListener("scroll", changeActive);
-        indicator(e.target);
-        setTimeout(()=>{
+        active = link;
+        initMarker();
+        scrollStop(function () {
             document.addEventListener("scroll", changeActive);
-        }, 1000);
+        });
     })
     link.addEventListener("mouseover", (e)=>{
         indicator(e.target);
@@ -55,6 +64,10 @@ function changeActive() {
         active = item[1];
         initMarker();
     }
+    if (character.scrollY <= profile.offsetTop) {
+        active.classList.remove("active");
+        item[2].classList.add("active");
+        active = item[1];
+        initMarker();
+    }
 }
-
-// console.log(character.offsetTop);

@@ -215,15 +215,15 @@ main {
 }
 
 .character {
+    padding: 10px 0;
     display: flex;
     flex-direction: column;
     background-color: black;
     color: #FEFFD9;
-    text-align: center;
-    font-size: xxx-large;
-}
+    text-align: center;}
 
 #c-title {
+    font-size: xxx-large;
     text-decoration: underline;
 }
 
@@ -282,10 +282,56 @@ main {
     text-align: right;
 }
 
+footer {
+    padding: 1px;
+    color: #1a1004;
+    background-color: #FEFFD9;
+    text-align: center;
+    font-weight: bold;
+}
 
+@media screen and (max-width: 600px) {
+    .navbar {
+        /* display: flex; */
+        flex-direction: column;
+    }
 
+    .leftBar {
+        /* display: flex; */
+        flex-direction: column;
+    }  
 
+    .home {
+        padding: 150px 0;
+    }
 
+    #bigLogo {
+        width: 200px;
+    }
 
+    #description {
+        font-size: medium;
+    }
+
+    #p-text {
+        font-size: x-large;
+    }
+
+    .p-images {
+        flex-direction: column;
+    }
+
+    #c-title {
+        font-size: x-large;
+    }
+    
+    .c-left img, .c-right img {
+        height: 100px;
+    }
+
+    .c-left .c-textBox p, .c-right .c-textBox p{
+        font-size: medium;
+    }
+}
 
 
