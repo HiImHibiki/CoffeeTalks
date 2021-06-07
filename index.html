@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script defer src="assets/scripts/script.js"></script>
     <title>Coffee Talks</title>
 </head>
@@ -18,7 +19,7 @@
                         <div id="marker"></div>
                         <li class="active"><a href="#home">Home</a></li>
                         <li><a href="#character">Characters</a></li>
-                        <li><a href="#profile">My Profile</a></li>
+                        <li><a href="#drinks">Menu</a></li>
                     </ul>
                 </div>
             </div>
@@ -111,6 +112,147 @@
                         <p id="c-name">Aqua: <q>A Shy Dreamer</q></p>
                         <p>A very shy mermaid from a very conservative family in Atlantis. She moved to Seattle to work in computer graphics technology. She's also an aspiring indie game developer.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="drinks" id="drinks">
+            <p id="d-title">Drinks</p>
+            <ul class="drink-nav filtering">
+                <li><button class="cat-all active">All Drinks</button></li>
+                <li><button class="cat-coffee" data-cat="cat-coffee">Coffee</button></li>
+                <li><button class="cat-tea" data-cat="cat-tea">Tea</button></li>
+                <li><button class="cat-greenTea" data-cat="cat-greenTea">Green Tea</button></li>
+                <li><button class="cat-chocolate" data-cat="chocolate">Chocolate</button></li>
+                <li><button class="cat-milk" data-cat="milk">Milk</button></li>
+            </ul>
+            <div class="row filter-cat-results">
+                <div class="col f-cat coffee-item" data-cat="cat-coffee">
+                    <img src="assets/images/Black Lemon.png" alt="">
+                    <p>Black Lemon</p>
+                </div>
+                <div class="col f-cat coffee-item" data-cat="cat-coffee">
+                    <img src="assets/images/Black Magic.png" alt="">
+                    <p>Black Magic</p>
+                </div>
+                <div class="col f-cat coffee-item" data-cat="cat-coffee">
+                    <img src="assets/images/Caffe Latte.png" alt="">
+                    <p>Caffe Latte</p>
+                </div>
+                <div class="col f-cat coffee-item" data-cat="cat-coffee">
+                    <img src="assets/images/Cappuccino.png" alt="">
+                    <p>Cappuccino</p>
+                </div>
+                <div class="col f-cat coffee-item" data-cat="cat-coffee">
+                    <img src="assets/images/Espresso.png" alt="">
+                    <p>Espresso</p>
+                </div>
+                <div class="col f-cat coffee-item" data-cat="cat-coffee">
+                    <img src="assets/images/Ginger Latte.png" alt="">
+                    <p>Ginger Latte</p>
+                </div
+                ><div class="col f-cat coffee-item" data-cat="cat-coffee">
+                    <img src="assets/images/Gingerbread Coffee.png" alt="">
+                    <p>Gingerbread Coffee</p>
+                </div>
+                <div class="col f-cat coffee-item" data-cat="cat-coffee">
+                    <img src="assets/images/Jahe Tubruk.png" alt="">
+                    <p>Jahe Tubruk</p>
+                </div>
+                <div class="col f-cat coffee-item" data-cat="cat-coffee">
+                    <img src="assets/images/Sugar and Spice.png" alt="">
+                    <p>Sugar and Spice</p>
+                </div>
+                <div class="col f-cat tea-item" data-cat="cat-tea"> 
+                    <img src="assets/images/Gala Had.png" alt="">
+                    <p>Gala Had</p>
+                </div>
+                <div class="col f-cat tea-item" data-cat="cat-tea">
+                    <img src="assets/images/Masala Chai.png" alt="">
+                    <p>Masala Chai</p>
+                </div>
+                <div class="col f-cat tea-item" data-cat="cat-tea">
+                    <img src="assets/images/Midsummer Night's Dream.png" alt="">
+                    <p>Midsummer Night’s Dream</p>
+                </div>
+                <div class="col f-cat tea-item" data-cat="cat-tea">
+                    <img src="assets/images/Russian Tea.png" alt="">
+                    <p>Russian Tea</p>
+                </div>
+                <div class="col f-cat tea-item" data-cat="cat-tea"> 
+                    <img src="assets/images/Shai Adeni.png" alt="">
+                    <p>Shai Adeni</p>
+                </div>
+                <div class="col f-cat tea-item" data-cat="cat-tea">
+                    <img src="assets/images/Teh Tarik.png" alt="">
+                    <p>Teh Tarik</p>
+                </div>
+                <div class="col f-cat greenTea-item" data-cat="cat-greenTea">
+                    <img src="assets/images/Cough Syrup.png" alt="">
+                    <p>Cough Syrup</p>
+                </div>
+                <div class="col f-cat greenTea-item" data-cat="cat-greenTea">
+                    <img src="assets/images/Green Tea Latte.png" alt="">
+                    <p>Green Tea Latte</p>
+                </div>
+                <div class="col f-cat greenTea-item" data-cat="cat-greenTea">
+                    <img src="assets/images/Marrakech.png" alt="">
+                    <p>Marrakech</p>
+                </div>
+                <div class="col f-cat greenTea-item" data-cat="cat-greenTea">
+                    <img src="assets/images/Shin Genmaicha.png" alt="">
+                    <p>Shin Genmaicha</p>
+                </div>
+                <div class="col f-cat greenTea-item" data-cat="cat-greenTea">
+                    <img src="assets/images/Cough Syrup.png" alt="">
+                    <p>Cough Syrup</p>
+                </div>
+                <div class="col f-cat greenTea-item" data-cat="cat-greenTea">
+                    <img src="assets/images/The Grinch.png" alt="">
+                    <p>The Grinch</p>
+                </div>
+                <div class="col f-cat chocolate-item" data-cat="chocolate">
+                    <img src="assets/images/Bitter Heart.png" alt="">
+                    <p>Bitter Heart</p>
+                </div>
+                <div class="col f-cat chocolate-item" data-cat="chocolate">
+                    <img src="assets/images/Chocobee Miruku.png" alt="">
+                    <p>Chocobee Miruku.png</p>
+                </div>
+                <div class="col f-cat chocolate-item" data-cat="chocolate">
+                    <img src="assets/images/Dark Chocolate.png" alt="">
+                    <p>Dark Chocolate</p>
+                </div>
+                <div class="col f-cat chocolate-item" data-cat="chocolate">
+                    <img src="assets/images/Spanish Sahara.png" alt="">
+                    <p>Spanish Sahara</p>
+                </div>
+                <div class="col f-cat chocolate-item" data-cat="chocolate">
+                    <img src="assets/images/Spiced Lady.png" alt="">
+                    <p>Spiced Lady</p>
+                </div>
+                <div class="col f-cat milk-item" data-cat="milk">
+                    <img src="assets/images/Bedchamber.png" alt="">
+                    <p>Bedchamber</p>
+                </div>
+                <div class="col f-cat milk-item" data-cat="milk">
+                    <img src="assets/images/Bitter Heart.png" alt="">
+                    <p>Bitter Heart</p>
+                </div>
+                <div class="col f-cat milk-item" data-cat="milk">
+                    <img src="assets/images/Le Menthol.png" alt="">
+                    <p>Le Menthol</p>
+                </div>
+                <div class="col f-cat milk-item" data-cat="milk">
+                    <img src="assets/images/Lemony Snippet.png" alt="">
+                    <p>Lemony Snippet</p>
+                </div>
+                <div class="col f-cat milk-item" data-cat="milk">
+                    <img src="assets/images/Milky Way.png" alt="">
+                    <p>Milky Way</p>
+                </div>
+                <div class="col f-cat milk-item" data-cat="milk">
+                    <img src="assets/images/STMJ.png" alt="">
+                    <p>STMJ.png</p>
                 </div>
             </div>
         </div>

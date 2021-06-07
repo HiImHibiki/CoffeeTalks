@@ -1,4 +1,3 @@
-
 var marker = document.querySelector("#marker");
 var nav = document.querySelector(".navbar");
 var active = document.querySelector(".active");
@@ -6,7 +5,7 @@ var item = document.querySelectorAll(".left-nav li");
 
 var home = document.querySelector("#home");
 var character = document.querySelector("#character");
-var profile = document.querySelector("#profile");
+var drinks = document.querySelector("#drinks");
 
 function scrollStop (callback, refresh = 66) {
     if (!callback || typeof callback !== 'function') return;
@@ -64,10 +63,66 @@ function changeActive() {
         active = item[1];
         initMarker();
     }
-    if (character.scrollY <= profile.offsetTop) {
+    if (character.scrollY <= drinks.offsetTop) {
         active.classList.remove("active");
         item[2].classList.add("active");
         active = item[1];
         initMarker();
     }
 }
+
+
+
+// DRINK MENU
+
+var filterActive;
+
+function filterCategory(category) {
+    console.log(category);
+    if (filterActive != category) {
+        
+        // reset results list
+        $('.filter-cat-results .f-cat').removeClass('active');
+        
+        // elements to be filtered
+        $('.filter-cat-results .f-cat')
+            .filter('[data-cat="' + category + '"]')
+            .addClass('active');
+        
+        // reset active filter
+        filterActive = category;
+        $('.filtering button').removeClass('active');
+    }
+}
+
+$('.f-cat').addClass('active');
+
+// $('.filtering button').each(function(i, button) {
+//     $(button).click(function(){
+//         if ($(this).hasClass('cat-all')) {
+//             $('.filter-cat-results .f-cat').addClass('active');
+//             filterActive = 'cat-all';
+//             $('.filtering button').removeClass('active');
+//         } else {
+//             filterCategory($(this).attr('data-cat'));
+//         }
+//         $(this).addClass('active');
+//     })
+// });
+
+// console.log($('.filtering button'));
+
+$('.filtering button').click(function() {
+    console.log($(this));
+    if ($(this).hasClass('cat-all')) {
+        $('.filter-cat-results .f-cat').addClass('active');
+        filterActive = 'cat-all';
+        $('.filtering button').removeClass('active');
+    } else {
+        filterCategory($(this).attr('data-cat'));
+    }
+    console.log(filterActive);
+    $(this).addClass('active');
+});
+
+
