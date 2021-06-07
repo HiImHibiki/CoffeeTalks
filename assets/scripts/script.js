@@ -63,10 +63,10 @@ function changeActive() {
         active = item[1];
         initMarker();
     }
-    if (character.scrollY <= drinks.offsetTop) {
+    if (window.scrollY >= drinks.offsetTop) {
         active.classList.remove("active");
         item[2].classList.add("active");
-        active = item[1];
+        active = item[2];
         initMarker();
     }
 }
