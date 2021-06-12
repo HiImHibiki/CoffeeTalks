@@ -349,34 +349,12 @@ main {
     text-align: center;
 }
 
-.row .col {
-    opacity: 0;
-    display: none;
-}
-
-.row .col.active {
-    opacity: 1;
-    display: block;
-    -webkit-animation: fadeIn 0.65s ease forwards;
-    animation: fadeIn 0.65s ease forwards;
-}
-
 footer {
     padding: 1px;
     color: #1a1004;
     background-color: #FEFFD9;
     text-align: center;
     font-weight: bold;
-}
-
-@-webkit-keyframes fadeIn {
-	0% { opacity: 0; }
-	100% { opacity: 1; }
-}
-
-@keyframes fadeIn {
-	0% { opacity: 0; }
-	100% { opacity: 1; }
 }
 
 @media screen and (max-width: 600px) {
