@@ -78,16 +78,15 @@ function changeActive() {
 var filterActive;
 
 function filterCategory(category) {
-    console.log(category);
     if (filterActive != category) {
         
         // reset results list
-        $('.filter-cat-results .f-cat').removeClass('active');
+        $('.filter-cat-results .f-cat').hide();
         
         // elements to be filtered
         $('.filter-cat-results .f-cat')
             .filter('[data-cat="' + category + '"]')
-            .addClass('active');
+            .fadeIn();
         
         // reset active filter
         filterActive = category;
@@ -95,33 +94,17 @@ function filterCategory(category) {
     }
 }
 
-$('.f-cat').addClass('active');
-
-// $('.filtering button').each(function(i, button) {
-//     $(button).click(function(){
-//         if ($(this).hasClass('cat-all')) {
-//             $('.filter-cat-results .f-cat').addClass('active');
-//             filterActive = 'cat-all';
-//             $('.filtering button').removeClass('active');
-//         } else {
-//             filterCategory($(this).attr('data-cat'));
-//         }
-//         $(this).addClass('active');
-//     })
-// });
-
-// console.log($('.filtering button'));
+$('.f-cat').fadeIn();
 
 $('.filtering button').click(function() {
-    console.log($(this));
     if ($(this).hasClass('cat-all')) {
-        $('.filter-cat-results .f-cat').addClass('active');
+        $('.filter-cat-results .f-cat').hide();
+        $('.filter-cat-results .f-cat').fadeIn();
         filterActive = 'cat-all';
         $('.filtering button').removeClass('active');
     } else {
         filterCategory($(this).attr('data-cat'));
     }
-    console.log(filterActive);
     $(this).addClass('active');
 });
 
