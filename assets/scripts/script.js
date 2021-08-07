@@ -97,11 +97,13 @@ function filterCategory(category) {
 $('.f-cat').fadeIn();
 
 $('.filtering button').click(function() {
+
     if ($(this).hasClass('cat-all')) {
         $('.filter-cat-results .f-cat').hide();
         $('.filter-cat-results .f-cat').fadeIn();
         filterActive = 'cat-all';
         $('.filtering button').removeClass('active');
+
     } else {
         filterCategory($(this).attr('data-cat'));
     }

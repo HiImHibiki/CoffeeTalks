@@ -319,6 +319,11 @@ main {
     font-size: 15px;
 }
 
+.filtering .active{
+    background-color: white;
+    color: #CE9868;
+}
+
 .filter-cat-results  {
     /* display: flex;
     flex-wrap: wrap; */
@@ -401,4 +406,71 @@ footer {
     }
 }
 
+@media screen and (max-width: 375px){
+    .navbar{
+        justify-content: center;
+        align-items: center;
+    }
 
+    .c-box{
+        padding: 10px 10px;
+    }
+
+    .c-left{
+        flex-direction: column;
+    }
+    
+    .c-right{
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+
+    .c-right .c-textBox p{
+        text-align: left;
+    }
+
+    .c-left img{
+        width: auto;
+        height: 200px;
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+
+    .c-right img{
+        width: auto;
+        height: 200px;
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+
+    .c-textBox{
+        padding: 0px;
+    }
+
+    .filtering{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+    }
+
+    .drink-nav button{
+        margin: 10px 0;
+        width: 130px;
+        font-size: 20px;
+    }
+
+    .f-cat img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .filter-cat-results{
+        padding: 0px 10px;
+        grid-template-columns: auto auto;
+        justify-content: space-evenly;
+    }
+
+    .coffee-item, .tea-item, .greenTea-item, .chocolate-item, .milk-item {
+        margin: 20px 0;
+    }
+}
